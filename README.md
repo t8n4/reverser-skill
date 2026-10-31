@@ -1,4 +1,4 @@
-# Ultimate Reverser
+# Ultimate Reverser Skill
 
 <p align="center">
   <img src="https://img.shields.io/badge/ULTIMATE-REVERSER-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Ultimate Reverser" />
