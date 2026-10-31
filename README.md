@@ -1,13 +1,5 @@
 # Ultimate Reverser
 
-## ☕ Support the Project
-
-If Ultimate Reverser is useful to you, consider supporting its development.
-
-<a href="https://buymeacoffee.com/t8n4">☕ Buy Me a Coffee</a>
-
-Every contribution helps support future improvements and development.
-
 **Advanced Static Reverse Engineering & Source Reconstruction Skill**
 
 Ultimate Reverser is a powerful, tool-agnostic reverse-engineering skill designed for AI coding agents. It analyzes executables, binaries, libraries, and compiled packages to reconstruct the most complete and readable source representation possible.
@@ -178,6 +170,14 @@ Reconstruction quality depends on the target format, compiler, optimization leve
 - Compatible static-analysis tools for the target format.
 - Node.js and npm when using the REA installation workflow.
 - REA is optional.
+
+## ☕ Support the Project
+
+If Ultimate Reverser is useful to you, consider supporting its development.
+
+<a href="https://buymeacoffee.com/t8n4">☕ Buy Me a Coffee</a>
+
+Every contribution helps support future improvements and development.
 
 ## 📄 License
 
