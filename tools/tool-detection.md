@@ -238,6 +238,7 @@ After restarting the agent, inspect the live MCP tool inventory.
 
 ### Important distinction
 
+
 A successful setup command does not necessarily mean the active agent session has loaded the new MCP tools.
 
 Only classify REA as connected after live tool discovery succeeds.
@@ -245,3 +246,48 @@ Only classify REA as connected after live tool discovery succeeds.
 Do not reinstall a healthy registration merely because the active session needs a restart.
 
 REA is preferred when available, but the workflow must remain independent of it.
+
+## 12. On-Demand Tool Installation
+
+The Core skill must load without installing external analysis tools.
+
+### 12.1 Detect first
+
+Use safe executable-presence checks, version queries and MCP tool discovery. Do not execute the supplied target.
+
+### 12.2 Match tool to target
+
+Install a tool only when:
+
+- The target format is identified.
+- A required static-analysis capability is missing.
+- No already-installed compatible alternative is available.
+
+Examples:
+
+- Android APK/DEX: consider JADX only if no compatible provider exists.
+- .NET assemblies: consider ILSpy only if no compatible provider exists.
+- Native binaries: consider Ghidra or Rizin only if existing providers are insufficient.
+
+These are examples, not automatic installation rules.
+
+### 12.3 Approval gate
+
+Before installing any external tool, present:
+
+- Tool name and official source.
+- Target-specific reason.
+- Required dependencies and approximate installation impact, if known.
+- Exact command.
+- Whether administrator privileges are required.
+- Existing alternatives.
+
+Wait for explicit approval. Install only the approved component.
+
+### 12.4 Never bulk install
+
+Do not install all candidate tools at once. Do not install tools during Core skill setup. Do not install optional GUI tools without a concrete need.
+
+### 12.5 Verify safely
+
+Verify the tool's version or availability after installation. Do not open or execute the user's target as part of installation verification.

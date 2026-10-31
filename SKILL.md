@@ -1445,4 +1445,81 @@ The original target remains unexecuted.
 
 The final deliverable remains one clean `decompiled_source` directory.
 
+# 18. LIGHTWEIGHT CORE AND ON-DEMAND TOOLING
+
+Ultimate Reverser has two independent layers:
+
+- **Core:** this skill, its knowledge files, workflows and tool-detection guidance.
+- **Providers/tools:** REA MCP and compatible local static-analysis applications.
+
+## 18.1 Core installation must stay lightweight
+
+The Core installation consists only of:
+
+- `SKILL.md`
+- `knowledge/`
+- `workflows/`
+- `tools/`
+
+Do not make Core installation depend on Node.js, npm, Python, Java, Ghidra, JADX, ILSpy, dnSpyEx, RetDec or other analysis applications.
+
+Do not download or install large tools during the initial skill installation.
+
+## 18.2 Standalone is the default
+
+Unless the user explicitly opts into REA:
+
+- Do not run `npx rea-agents`.
+- Do not install or configure REA.
+- Do not create or modify MCP registrations.
+- Use only providers already available in the environment.
+- Continue with static alternatives when REA is unavailable.
+
+The absence of REA must never prevent Core from loading.
+
+## 18.3 Detect tools; do not bulk-install
+
+At the start of a reverse-engineering task, detect which tools are already installed.
+
+Choose tools only after identifying the target format and required capabilities.
+
+If a required tool is missing:
+
+1. Explain which target-specific capability is unavailable.
+2. Explain why the tool is needed and whether an alternative exists.
+3. Present the exact proposed installation command and source.
+4. Wait for explicit user approval.
+5. Install only the approved tool.
+6. Verify installation without executing the target.
+
+Never install the entire candidate tool list just in case.
+
+## 18.4 Optional REA installation
+
+REA setup is permitted only after explicit user opt-in and approval of the setup preview.
+
+Use the existing REA integration procedure in section 17. Keep `--skill=false` so Ultimate Reverser remains the single workflow owner.
+
+## 18.5 Updates
+
+When updating the skill:
+
+- Preserve the previous skill directory as a backup.
+- Replace only the Ultimate Reverser skill directory.
+- Do not overwrite OpenCode configuration or unrelated skills.
+- Do not reinstall analysis tools.
+- Do not change REA configuration unless the user explicitly requests it.
+
+## 18.6 Installation state
+
+Distinguish clearly between:
+
+- Core installed.
+- REA configured.
+- REA live-connected.
+- Local analysis tools detected.
+
+A successful Core installation does not imply REA is installed or connected, and a configured REA entry does not prove that live MCP tools are available.
+
+
 **Ultimate Reverser is the orchestrator, REA is a preferred provider, and evidence is the authority.**
