@@ -276,6 +276,26 @@ No unrelated analysis reports, temporary dumps, tool databases, or caches are in
 
 ---
 
+## ☕ Support the Project
+
+<p align="center">
+  <strong>Enjoying Ultimate Reverser?</strong>
+  <br />
+  If this project saves you time or helps your workflow, consider supporting its development.
+</p>
+
+<p align="center">
+  <a href="https://buymeacoffee.com/t8n4">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="210" />
+  </a>
+</p>
+
+<p align="center">
+  Every contribution helps support future improvements, maintenance, and development.
+</p>
+
+---
+
 ## 🔒 Safety & Limitations
 
 Ultimate Reverser follows a static-first, source-reconstruction workflow.
@@ -301,26 +321,6 @@ Reconstruction quality depends on the target format, compiler, optimization leve
 - Compatible static-analysis tools for the target format.
 - Node.js and npm when using the REA installation workflow.
 - REA is optional.
-
----
-
-## ☕ Support the Project
-
-<p align="center">
-  <strong>Enjoying Ultimate Reverser?</strong>
-  <br />
-  If this project saves you time or helps your workflow, consider supporting its development.
-</p>
-
-<p align="center">
-  <a href="https://buymeacoffee.com/t8n4">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="210" />
-  </a>
-</p>
-
-<p align="center">
-  Every contribution helps support future improvements, maintenance, and development.
-</p>
 
 ---
 
