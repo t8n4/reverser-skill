@@ -313,26 +313,6 @@ Temporary analysis databases, logs, caches, unrelated reports and dumps are excl
 
 ---
 
-## Safety & Limitations
-
-Ultimate Reverser follows a static-first reconstruction workflow.
-
-- Original executables are never executed.
-- Reconstructed source code is never executed.
-- No dynamic debugging or runtime instrumentation is performed.
-- Original target files are preserved.
-- DRM, licensing, authentication and access-control bypasses are outside the intended scope.
-- Credentials and secrets are not extracted.
-- Missing source code is never fabricated.
-
-**Recovery is not guaranteed to be identical to the original source.** Compilation and obfuscation can permanently remove comments, formatting, original variable names and high-level structures.
-
-Results depend on the target format, compiler, optimization level, symbols, metadata and available analysis tools.
-
----
-
-## Support
-
 <p align="center">
   <strong>Enjoying Ultimate Reverser?</strong>
   <br />
@@ -348,6 +328,24 @@ Results depend on the target format, compiler, optimization level, symbols, meta
 <p align="center">
   Every contribution helps support future improvements and development.
 </p>
+
+---
+
+## Safety & Limitations
+
+Ultimate Reverser follows a static-first reconstruction workflow.
+
+- Original executables are never executed.
+- Reconstructed source code is never executed.
+- No dynamic debugging or runtime instrumentation is performed.
+- Original target files are preserved.
+- DRM, licensing, authentication and access-control bypasses are outside the intended scope.
+- Credentials and secrets are not extracted.
+- Missing source code is never fabricated.
+
+**Recovery is not guaranteed to be identical to the original source.** Compilation and obfuscation can permanently remove comments, formatting, original variable names and high-level structures.
+
+Results depend on the target format, compiler, optimization level, symbols, metadata and available analysis tools.
 
 ---
 
